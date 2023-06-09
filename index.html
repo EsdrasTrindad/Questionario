@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+    <meta name="description" content="question" />
+    <meta charset="UTF-8">
+    <title>Questionário</title>
+  </head>
+
+  <body>
+    <header>
+    <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+    <h1>Questionário HTML/CSS</h1>
+    <nav>
+      <ul>
+        <li><a href="#student-info">INFO</a></li>
+        <li><a href="#html-questions">HTML</a></li>
+        <li><a href="#css-questions">CSS</a></li>
+      </ul>
+    </nav>
+  </header>
+    <main>
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Informações do estudante</h2>
+          <div class="info">
+            <label for="nome">Nome: </label>
+            <input id="nome" type="text" 
+            name="nome" placeholder="Digite seu nome..." />
+          </div>
+          <div class="info">
+            <label for="email">Email: </label>
+            <input id="email" type="email" 
+            name="email" placeholder="Digite seu email..." />
+          </div>
+          <div class="info">
+            <label for="dtnas">D.N.:
+              <span class="sr-only"></span> </label>
+            <input id="dtnas" type="date" name="data" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">Questões HTML</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset class="question" name="questoeshtml">
+              <legend>Um elemento de rótulo que aninha um 
+                elemento de entrada deve ter um atributo for 
+                com o mesmo valor que o id da entrada</legend>
+              <ul class="respostas">
+                <li><input type="radio" class="inline" name="resp1">Verdadeiro</li>
+                <li><input type="radio" class="inline" name="resp1">Falso</li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block"> 
+            <p>2</p>
+            <fieldset class="question" name="questoeshtml">
+              <legend>O elemento <b>legend</b> representa uma legenda 
+                para o conteúdo de seu elemento fieldset pai</legend>
+              <ul class="respostas">
+                <li><input type="radio" class="inline" name="resp2">Verdadeiro</li>
+                <li><input type="radio" class="inline" name="resp2">Falso</li>
+              </ul>
+            </fieldset>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">Questões CSS</h2>
+          <div class="formrow">
+            <div class="perg">
+              <label for="select">Você é um desenvolvedor front-end?</label>
+            </div>
+            <div class="resp">
+              <select required name="select" id="select">
+                <option value="">Selecione uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+              </select>
+            </div>
+            <div class="perg">
+              <label for="textbox">Você tem alguma pergunta:</label>
+            </div>
+            <div class="resp">
+              <textarea id="textbox" name="textbox" placeholder="Digite sua pergunta..." rows="5" cols="40"></textarea>
+            </div>
+          </div>
+        </section>
+        <button id="submit" type="submit" name="botao-enviar">Enviar</button>
+      </form>
+    </main>
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org" target="_blank">freeCodeCamp</a><br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
+
+  </body>
+
+
+</html>
